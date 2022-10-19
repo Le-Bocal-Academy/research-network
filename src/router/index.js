@@ -23,6 +23,11 @@ const router = createRouter({
       name: "logout",
       component: LogoutView,
     },
+    {
+      path: "/profile/:id?",
+      name: "profile",
+      props: true,
+      component: () => import("../views/ProfileView.vue"),
     },
   ],
 });

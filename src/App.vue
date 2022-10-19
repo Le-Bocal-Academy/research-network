@@ -21,6 +21,7 @@ export default {
   <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
+      <RouterLink v-if="isLoggedIn" to="/profile">My Profile</RouterLink>
       <RouterLink v-if="isLoggedIn" to="/logout">Logout</RouterLink>
       <RouterLink v-else to="/signin">Login/Register</RouterLink>
     </nav>
